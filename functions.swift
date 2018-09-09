@@ -1,4 +1,5 @@
 /* FUNCTIONS */
+// https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID463
 
 // Basic function
 func greeting(person: String, day: String) -> String {

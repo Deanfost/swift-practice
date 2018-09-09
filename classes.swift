@@ -1,4 +1,15 @@
+/* CLASSES IN SWIFT */
+// https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID464
 // Basic shape class
+/* Note that there are 3 basic steps for constructing a subclass:
+
+    1. Setting the value of properties that the subclass declares.
+    2. Calling the superclass’s initializer.
+    3. Changing the value of properties defined by the superclass.
+       Any additional setup work that uses methods, getters, or
+       setters can also be done at this point.
+*/
+
 class Shape {
   // By default these are public
   private var name: String
@@ -28,6 +39,18 @@ class Triangle: Shape {
     super.init(name: "Triangle", color: color, sides: 3)
   }
 
+  // Getters and setters for compuatable values
+  var foo: Int {
+    get {
+        return 3 * dimensions
+    }
+    set(value) {
+        dimensions = value / 3
+    }
+}
+
+/* NOTE THAT THERE ARE ALSO DIDSET AND WILLSET VALUES. Look into those in the docs. */
+
   override func description() -> Void {
     super.description()
     print("Hello I have been overwritten and have \(self.dimensions) dimensions")
@@ -36,4 +59,5 @@ class Triangle: Shape {
 
 var triangle = Triangle(color: "Yellow")
 triangle.dimensions = 4
+triangle.foo = 6
 triangle.description()

@@ -1,4 +1,5 @@
 /* BASICS OF SWIFT */
+// https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID461
 
 // Basic values
 var myVariable = 0;
@@ -82,6 +83,10 @@ let fullName: String = "Johnny Appleseed"
 // Uses nickName if available, uses fullName as default value if needed
 let greeting = "Hello \(nickName ?? fullName)"
 // print(greeting)
+
+// Optional computing expressions
+// let optionalInt: Int? = expression
+// let sideLength = optionalInt?
 
 // Switch statements
 let veg = "Red pepper"
