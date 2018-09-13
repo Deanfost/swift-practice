@@ -67,3 +67,17 @@ print("Multiply all numbers: " + String(list.multiply()))
 print("Sum all numbers: " + String(list.sum()))
 print("Numbers contained: ")
 list.printOut()
+
+func lessThan3(_ x: Int) -> Bool {
+  // Determine if the value is less than 3
+  if x < 3 {
+    return true
+  }
+  else {
+    return false
+  }
+}
+
+var filtered = list.filter(p: lessThan3)
+print("Filtered list: ")
+filtered.printOut()
